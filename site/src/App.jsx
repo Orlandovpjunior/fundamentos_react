@@ -1,7 +1,7 @@
 import { Header } from './components/Header';
-import { Post } from './Post'
-import styles from "./App.module.css";
+import { Post } from './components/Post';
 import { SideBar } from './components/SideBar';
+import styles from "./App.module.css";
 import "./global.css"
 
 function App() {
@@ -12,6 +12,10 @@ function App() {
       <div className={styles.wrapper}>
         <SideBar/>
         <main>
+          <Post 
+            author= "Orlando"
+            content="Texto muito bom!"  
+          />
           <Post 
             author= "Orlando"
             content="Texto muito bom!"  
