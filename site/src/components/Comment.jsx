@@ -5,7 +5,7 @@ import { Avatar } from './Avatar';
 export function Comment({content, onDeleteComment}){
 
     function handleDeleteComment() {
-        onDeleteComment(content);
+        onDeleteComment(content); 
     }
     return(
         <div className={style.comment}>
