@@ -1,24 +1,14 @@
 import { Header } from './components/Header';
-import { Post } from './components/Post';
+import { Post, PostType } from './components/Post';
 import { SideBar } from './components/SideBar';
 import styles from "./App.module.css";
 import "./global.css"
 
-type Content = {
-  type: 'paragraph' | 'link';
-  content: string;
-};
+interface Post{
 
-const posts: {
-  id: number;
-  author: {
-    avatarUrl: string;
-    name: string;
-    role: string;
-  };
-  content: Content[];
-  publishedAt: Date;
-}[] = [
+}
+
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -61,9 +51,7 @@ function App() {
           return (
             <Post 
               key={post.id}
-              author={post.author}
-              content={post.content}
-              publishedAt={post.publishedAt}
+              post={post}
             />
           )
          })}
