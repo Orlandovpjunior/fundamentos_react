@@ -4,7 +4,21 @@ import { SideBar } from './components/SideBar';
 import styles from "./App.module.css";
 import "./global.css"
 
-const posts = [
+type Content = {
+  type: 'paragraph' | 'link';
+  content: string;
+};
+
+const posts: {
+  id: number;
+  author: {
+    avatarUrl: string;
+    name: string;
+    role: string;
+  };
+  content: Content[];
+  publishedAt: Date;
+}[] = [
   {
     id: 1,
     author: {
